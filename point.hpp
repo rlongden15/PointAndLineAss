@@ -37,13 +37,11 @@ void point::AssignVals(double xVal, double yVal){
 }
 
 void point::SetX(double xVal){
-    x = xVal;
-    //round(xVal * 10) / 10;
+    x = round(xVal * 10) / 10;
 }
 
 void point::SetY(double yVal){
-    y = yVal;
-    //round(yVal * 10) / 10;
+    y = round(yVal * 10) / 10;
 }
 
 double point::GetX() const{

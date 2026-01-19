@@ -3,6 +3,7 @@
 #define CATCH_CONFIG_MAIN   
 #include "catch.hpp"
 #include "point.hpp"
+#include "line.hpp"
 using namespace std;
 
 
@@ -22,4 +23,14 @@ using namespace std;
         REQUIRE(p3.GetX() == 1076.8);
         REQUIRE(p3.GetY() == 3323.7);
  	}
+
+	SECTION("Line test"){
+		point p1(4.5, 7.4);
+		point p2 (7.4, 3.9);
+
+	}
+
  }
+
+
+

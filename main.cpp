@@ -25,9 +25,11 @@ using namespace std;
  	}
 
 	SECTION("Line test"){
-		point p1(4.5, 7.4);
-		point p2 (7.4, 3.9);
-
+		//testing length
+		line l1(4.5, 6.2, 1.2, 3.8);
+		REQUIRE(l1.length() == 4.1);
+		line l2(2.3, 4.7, 4000.2, 3000.675);
+		REQUIRE(l2.length() == 4995.9);
 	}
 
  }

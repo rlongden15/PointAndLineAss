@@ -5,14 +5,10 @@ using namespace std;
 
 class line{
     public:
-    line(point one, point two);
-    double length(point p1, point p2);
-
-    
+    line(double x1, double y1, double x2, double y2);
+    double length();
 
     private:
     point p1;
     point p2;
-
-
 };

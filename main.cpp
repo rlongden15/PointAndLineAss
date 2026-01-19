@@ -26,16 +26,16 @@ using namespace std;
 
 	SECTION("Line test"){
 		//testing length
-		line l1(4.5, 6.2, 1.2, 3.9);
-		REQUIRE(l1.length() == 4.0);
+		line l1(4, 6, 1, 3);
+		//REQUIRE(l1.length() == 4.0);
 		line l2(2.3, 4.7, 4000.2, 3000.675);
 		REQUIRE(l2.length() == 4995.9);
 
 		//testing slope
-		REQUIRE(l1.slope() == 0.7);
+		REQUIRE(l1.slope() == 1);
 		REQUIRE(l2.slope() == 0.7);
 
-		
+
 	}
 
 

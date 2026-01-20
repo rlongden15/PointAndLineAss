@@ -12,6 +12,11 @@ class line{
     bool specPointOnLine(double x, double y);
     void extendLine(double d);
     point midPoint();
+    double getXval1();
+    double getYval1();
+    double getXval2();
+    double getYval2();
+    void print();
 
 
     private:

@@ -7,12 +7,6 @@ point::point(double xVal, double yVal){
 }
 
 void point::AssignVals(double xVal, double yVal){
-    if(xVal < 0){
-        xVal =  0;
-    }
-    if(yVal < 0){
-        yVal = 0;
-    }
     SetX(xVal);
     SetY(yVal);
 }

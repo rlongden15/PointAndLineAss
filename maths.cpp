@@ -55,3 +55,37 @@ point line::midPoint(){
     return point(xm, ym);
 }
 
+void line::extendLine(double d){
+    double Vlength = length();
+    double newX1 = x1 - ( d * (x2- x1/Vlength));
+    double newY2 = y1 - ( d * (y2- y1/Vlength));
+    double newX2 = x2 + (d * (x2 - x1/ Vlength));
+    double newY1 = y2 + (d * (y2 - y1/ Vlength));
+    newX1 = round(newX1 * 10) / 10;
+    newY2 = round(newY2 * 10) / 10;
+    newX2 = round(newX2 * 10) / 10;
+    newY1 = round(newY1 * 10) / 10;
+    p1 = point(newX1, newY2);
+    p2 = point(newX2, newY1);
+    createXY();
+}
+
+double line::getXval1(){
+    return x1;
+}
+double line::getYval1(){
+    return y1;
+}
+double line::getXval2(){
+    return x2;
+}
+double line::getYval2(){
+    return y2;
+}
+
+void line::print()
+{
+    cout << "Point 1: [X: " << x1 << ",Y: " << y1 << "],";
+    cout << "Point 1: [X: " << x2 << ",Y: " << y2 << "],";
+    cout << " Length: " << length();
+}

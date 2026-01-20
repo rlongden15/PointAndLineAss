@@ -30,5 +30,28 @@ double line::slope(){
     return slope;
 }
 
-//
+// find if specified point is on the line
+bool line::specPointOnLine(double x, double y){
+    if (x2 - x1 == 0) // check for vertical lines and avoids division of 0
+    {
+        return round(x * 10) / 10 == round(x1 * 10) / 10; // compre both x and x1
+    }
+
+    double m = slope();
+    double b = y1 - m * x1; // y = mx + b
+
+    double left = round(y * 10) / 10;            // the actual y value we're checking
+    double right = round((m * x + b) * 10) / 10; // the expected value we'er checking
+
+    return left == right; // if they are the same send them (they are on the line)
+}
+
+// Find the midpoint of the line (returns a new Point exactly in the center of the Line)
+point line::midPoint(){
+    // xm = (x1 + x2) / 2 and ym = ( y1 + y2) /2
+    double xm = (x1 + x2) / 2.0;
+    double ym = (y1 + y2) / 2.0;
+    // create the new point at the middle
+    return point(xm, ym);
+}
 

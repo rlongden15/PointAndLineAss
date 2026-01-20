@@ -35,7 +35,16 @@ using namespace std;
 		REQUIRE(l1.slope() == 1);
 		REQUIRE(l2.slope() == 0.7);
 
+		//test midpoint calculator
+		line l4(2, 3, 6, 7);
+		REQUIRE(l4.midPoint().GetX() == 4.0);
+		REQUIRE(l4.midPoint().GetY() == 5.0);
+		//test 
 
+		//point on line
+		line l5(1, 2, 3, 6);
+		REQUIRE(l5.specPointOnLine(2, 4.1) == false);
+		REQUIRE(l5.specPointOnLine(2, 4) == true);
 	}
 
 

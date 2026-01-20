@@ -9,6 +9,10 @@ class line{
     double length();
     double slope();
     void createXY();
+    bool specPointOnLine(double x, double y);
+    void extendLine(double d);
+    point midPoint();
+
 
     private:
     double x1;
